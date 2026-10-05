@@ -858,6 +858,24 @@ img.fx.ok{opacity:1}
 .ev.ev-pin .ev-grid{width:100%;grid-template-rows:repeat(4,min(172px,calc((100vh - 150px) / 4 - 14px)))}
 .ev-pin .ev-ph,.ev-pin .ev-card,.ev-pin .ev-ph img,.ev-pin .ev-tag,.ev-pin .ev-card>*{transition:none!important}
 }
+
+/* banner full expansivel no topo */
+.hbanner{position:relative;height:0;overflow:hidden;transition:height .9s cubic-bezier(.7,0,.2,1)}
+.hbanner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;transform:scale(1.12);transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+.hero.hb-on .hbanner{height:calc(100vh - 84px);height:calc(100svh - 84px)}
+.hero.hb-on .hbanner img{transform:scale(1)}
+.hero.hb-on{padding-top:0}
+.hb-toggle{position:absolute;top:18px;right:24px;z-index:6;display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px 0 12px;border:0;border-radius:50px;background:rgba(255,255,255,.78);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 6px 18px rgba(65,51,44,.12),0 0 0 1px rgba(65,51,44,.08);color:var(--ink);font:400 14px var(--f-body);cursor:pointer;transition:background .3s,color .3s,transform .3s}
+.hb-toggle:hover{background:var(--logo-red,#922925);color:#fff;transform:translateY(-1px)}
+.hb-toggle:focus-visible{outline:2px solid var(--logo-red,#922925);outline-offset:3px}
+.hb-ic{width:18px;height:18px;display:grid;place-items:center}
+.hb-ic svg{width:18px;height:18px}
+.hb-close{display:none}
+.hero.hb-on .hb-open{display:none}.hero.hb-on .hb-close{display:grid}
+@media (max-width:700px){.hb-toggle .hb-txt{display:none}.hb-toggle{padding:0;width:40px;justify-content:center;right:14px;top:12px}.hero.hb-on .hbanner{height:62vh}}
+@media (prefers-reduced-motion:reduce){.hbanner,.hbanner img{transition:none}}
+.ingredients{transition:opacity .5s}
+body.hb-open .ingredients{opacity:0;pointer-events:none}
 </style>
 </head>
 <body>
@@ -966,6 +984,8 @@ img.fx.ok{opacity:1}
 
 <main>
   <section class="hero" id="inicio">
+    <div class="hbanner" id="hBanner" aria-hidden="true"><img src="img/banner-copos.webp" alt="Oito copos de gelato Stuppendo com sabores variados" width="1920" height="1081" loading="lazy" decoding="async"></div>
+    <button class="hb-toggle" id="hbToggle" type="button" aria-expanded="false" aria-controls="hBanner"><span class="hb-ic hb-open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="hb-ic hb-close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="hb-txt">Expandir</span></button>
     <div class="inner">
       <h1 data-anim="up">Tradição Italiana com o Sabor do <span class="hl">Gelato Artesanal<svg viewBox="0 0 500 150" preserveAspectRatio="none" aria-hidden="true"><path d="M6.5,75.5s25-29,50,0,50,0,50,0,25-32,50,0,50-1,50-1,25-30,50,1,50,0,50,0,27-28,50,0,50,0,50,0,26-25,50,0,36,7,36,7" transform="translate(-3.09 -56.78)"/></svg></span></h1>
       <a class="btn hero-btn" href="#cardapio" data-anim="up" data-delay="200">Ver os sabores</a>
@@ -1512,6 +1532,8 @@ mq.addEventListener?mq.addEventListener('change',setup):mq.addListener(setup);
 addEventListener('scroll',req,{passive:true});addEventListener('resize',req);
 setup();
 })();</script>
+<script>(function(){var h=document.getElementById('inicio'),b=document.getElementById('hbToggle'),bn=document.getElementById('hBanner');if(!h||!b)return;var t=b.querySelector('.hb-txt'),im=bn.querySelector('img');
+b.addEventListener('click',function(){var on=!h.classList.contains('hb-on');if(on&&im.loading==='lazy')im.loading='eager';h.classList.toggle('hb-on',on);document.body.classList.toggle('hb-open',on);b.setAttribute('aria-expanded',on);bn.setAttribute('aria-hidden',!on);t.textContent=on?'Recolher':'Expandir';b.setAttribute('aria-label',on?'Recolher banner':'Expandir banner');if(on)window.scrollTo({top:0,behavior:'smooth'})});})();</script>
 
 </body>
 </html>
