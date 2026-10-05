@@ -876,6 +876,16 @@ img.fx.ok{opacity:1}
 @media (prefers-reduced-motion:reduce){.hbanner,.hbanner img{transition:none}}
 .ingredients{transition:opacity .5s}
 body.hb-open .ingredients{opacity:0;pointer-events:none}
+
+/* banner: borda organica e respiro */
+.hbanner{-webkit-mask:linear-gradient(#000,#000) top/100% calc(100% - 109px) no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20110%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%200H1440V44C1300%2092%201150%2020%20960%2052C760%2086%20620%2018%20420%2048C260%2072%20120%2030%200%2058Z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E") bottom/100% 110px no-repeat;mask:linear-gradient(#000,#000) top/100% calc(100% - 109px) no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20110%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%200H1440V44C1300%2092%201150%2020%20960%2052C760%2086%20620%2018%20420%2048C260%2072%20120%2030%200%2058Z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E") bottom/100% 110px no-repeat}
+.hb-line{display:block;width:100%;height:110px;margin-top:-110px;position:relative;z-index:2;pointer-events:none;opacity:0;transition:opacity .6s ease .5s}
+.hb-line path{stroke-dasharray:0 100;transition:stroke-dasharray 1.6s cubic-bezier(.45,.05,.25,1) .6s}
+.hero.hb-on .hb-line{opacity:.7}
+.hero.hb-on .hb-line path{stroke-dasharray:100 0}
+.hero .inner{transition:padding-top .9s cubic-bezier(.7,0,.2,1)}
+.hero.hb-on .inner{padding-top:90px}
+@media (max-width:700px){.hero.hb-on .inner{padding-top:50px}}
 </style>
 </head>
 <body>
@@ -984,7 +994,7 @@ body.hb-open .ingredients{opacity:0;pointer-events:none}
 
 <main>
   <section class="hero" id="inicio">
-    <div class="hbanner" id="hBanner" aria-hidden="true"><img src="img/banner-copos.webp" alt="Oito copos de gelato Stuppendo com sabores variados" width="1920" height="1081" loading="lazy" decoding="async"></div>
+    <div class="hbanner" id="hBanner" aria-hidden="true"><img src="img/banner-copos.webp" alt="Oito copos de gelato Stuppendo com sabores variados" width="1920" height="1081" loading="lazy" decoding="async"></div><svg class="hb-line" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><path d="M0 74C120 46 260 88 420 64C620 34 760 102 960 68C1150 36 1300 108 1440 60" fill="none" stroke="#b4702f" stroke-width="1.4" stroke-linecap="round" vector-effect="non-scaling-stroke" pathLength="100"/></svg>
     <button class="hb-toggle" id="hbToggle" type="button" aria-expanded="false" aria-controls="hBanner"><span class="hb-ic hb-open"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="hb-ic hb-close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="hb-txt">Expandir</span></button>
     <div class="inner">
       <h1 data-anim="up">Tradição Italiana com o Sabor do <span class="hl">Gelato Artesanal<svg viewBox="0 0 500 150" preserveAspectRatio="none" aria-hidden="true"><path d="M6.5,75.5s25-29,50,0,50,0,50,0,25-32,50,0,50-1,50-1,25-30,50,1,50,0,50,0,27-28,50,0,50,0,50,0,26-25,50,0,36,7,36,7" transform="translate(-3.09 -56.78)"/></svg></span></h1>
