@@ -1004,6 +1004,12 @@ html,body{margin:0;overflow-x:clip}
 </style>
 </head>
 <body>
+<script>(function(){if(location.search.indexOf('diag')<0)return;var errs=[];addEventListener('error',function(e){errs.push((e.message||'res')+' '+(e.filename||e.target&&e.target.src||'').split('/').pop()+':'+(e.lineno||''))},true);
+setTimeout(function(){var h=document.querySelector('.hero'),h1=h.querySelector('h1'),x=innerWidth/2,y=Math.min(innerHeight*.35,h.getBoundingClientRect().bottom-20);
+var stack=(document.elementsFromPoint?document.elementsFromPoint(x,y):[]).slice(0,6).map(function(e){return e.tagName+'.'+String(e.className&&e.className.baseVal!==undefined?e.className.baseVal:e.className).slice(0,30)});
+var cs=getComputedStyle(h),c1=getComputedStyle(h1);
+var info=['UA '+navigator.userAgent.replace(/.*(Chrome\/[\d.]+).*/,'$1'),'w '+innerWidth+' dpr '+devicePixelRatio,'pontos: '+stack.join(' > '),'hero bg '+cs.backgroundColor+' '+cs.backgroundImage.slice(-40),'h1 '+h1.className+' op '+c1.opacity+' vis '+c1.visibility+' tr '+c1.transform,'erros: '+(errs.join(' | ')||'nenhum')];
+var d=document.createElement('pre');d.textContent=info.join('\n');d.style.cssText='position:fixed;left:10px;bottom:10px;z-index:99999;background:#111;color:#0f0;font:12px/1.4 monospace;padding:12px;max-width:90vw;white-space:pre-wrap;border-radius:8px';document.body.appendChild(d)},3500)})();</script>
 
 
 <script>document.documentElement.classList.add("js")</script>
