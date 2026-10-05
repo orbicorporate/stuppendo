@@ -997,6 +997,10 @@ html,body{margin:0;overflow-x:clip}
 @media (max-width:700px){
   .hero.hb-on .hbanner{height:calc(62vw + 110px)}
 }
+.ingredients{position:fixed!important;inset:0!important;height:100vh!important;width:100%;overflow:hidden;contain:strict}
+/* chrome desktop: sem backdrop-filter no topo */
+.hb-toggle,.hb-arrow{-webkit-backdrop-filter:none!important;backdrop-filter:none!important;background:rgba(255,255,255,.94)}
+.hb-toggle:hover,.hb-arrow:hover{background:var(--logo-red,#922925)}
 </style>
 </head>
 <body>
@@ -1512,19 +1516,21 @@ html,body{margin:0;overflow-x:clip}
       return {el:d,y:c[2],sp:c[4],rot:c[5],base:(i*47)%360};
     });
     function size(){
-      var H=document.documentElement.scrollHeight;layer.style.height=H+"px";
-      els.forEach(function(o){o.top=o.y/100*H;o.el.style.top=o.top+"px"});
+      var H=document.documentElement.scrollHeight;layer.style.height="";
+      els.forEach(function(o){o.top=o.y/100*H;o.el.style.top="0px"});
       move();
     }
     function move(){
       var y=scrollY,mid=y+innerHeight/2;
       els.forEach(function(o){
-        var d=mid-o.top;if(Math.abs(d)>innerHeight*1.6)return;
-        o.el.style.transform=reduce?"rotate("+o.base+"deg)":"translate3d(0,"+(-d*o.sp).toFixed(1)+"px,0) rotate("+(o.base+d*o.rot).toFixed(1)+"deg)";
+        var d=mid-o.top;if(Math.abs(d)>innerHeight*1.6){if(!o.off){o.el.style.visibility="hidden";o.off=true}return}
+        if(o.off){o.el.style.visibility="";o.off=false}
+        var ty=o.top-y+(reduce?0:-d*o.sp);
+        o.el.style.transform="translate3d(0,"+ty.toFixed(1)+"px,0) rotate("+(reduce?o.base:(o.base+d*o.rot)).toFixed(1)+"deg)";
       });
     }
     var t=false;
-    if(!reduce)addEventListener("scroll",function(){if(!t){t=true;requestAnimationFrame(function(){t=false;move()})}},{passive:true});
+    addEventListener("scroll",function(){if(!t){t=true;requestAnimationFrame(function(){t=false;move()})}},{passive:true});
     addEventListener("resize",size);addEventListener("load",size);size();setTimeout(size,1500);
   })();
 
