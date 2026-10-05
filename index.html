@@ -1020,9 +1020,9 @@ html,body{margin:0;overflow-x:clip}
 .g2-bot{align-items:flex-start;margin-top:18px}
 .g2-top{margin-bottom:18px}
 .g2-note{font-size:12px;line-height:1.5;letter-spacing:.06em;text-transform:uppercase;color:var(--body);max-width:260px}
-.g2-big{font-family:var(--f-head);font-weight:400;text-transform:uppercase;letter-spacing:-.01em;font-size:clamp(44px,7.4vw,124px);line-height:.9;color:var(--ink);text-align:right}
+.g2-big{font-family:var(--f-head);font-weight:400;text-transform:uppercase;letter-spacing:-.01em;font-size:clamp(40px,6vw,100px);line-height:.9;color:var(--ink);text-align:right}
 .g2-bot .g2-big{color:var(--logo-red,#922925);text-align:right}.g2-top .g2-big{text-align:left}.g2-top .g2-note{text-align:right;margin-bottom:8px}
-.g2-view{position:relative;height:clamp(300px,36vw,580px);cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;outline:none;overflow:hidden}
+.g2-view{position:relative;height:clamp(260px,29vw,460px);cursor:grab;touch-action:pan-y;user-select:none;-webkit-user-select:none;outline:none;overflow:hidden}
 .g2-view.drag{cursor:grabbing}
 .g2-track{position:absolute;left:0;top:0;height:100%;display:flex}
 .g2-it{flex:none;height:100%;margin:0;position:relative;overflow:hidden;background:#eadfd6;cursor:zoom-in}
@@ -1035,7 +1035,7 @@ html,body{margin:0;overflow-x:clip}
 .g2.go .g2-it{animation:g2it 1s cubic-bezier(.7,0,.2,1) both;animation-delay:calc(var(--k) * 60ms)}
 @keyframes g2big{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
 @keyframes g2it{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
-@media (max-width:700px){.g2{padding:150px 0 50px}.g2-view{height:380px!important}.g2-top,.g2-bot{flex-direction:column;align-items:flex-start;gap:10px}.g2-top .g2-note{text-align:left}.g2-bot{flex-direction:column-reverse;align-items:flex-end}.g2-view{height:300px}.g2-tag{opacity:1;transform:none;font-size:11px}}
+@media (max-width:700px){.g2{padding:150px 0 50px}.g2-view{height:320px!important}.g2-top,.g2-bot{flex-direction:column;align-items:flex-start;gap:10px}.g2-top .g2-note{text-align:left}.g2-bot{flex-direction:column-reverse;align-items:flex-end}.g2-view{height:300px}.g2-tag{opacity:1;transform:none;font-size:11px}}
 @media (prefers-reduced-motion:reduce){.g2.go .g2-big,.g2.go .g2-it{animation:none}}
 
 /* galeria estilo 3: mosaico */
