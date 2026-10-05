@@ -501,7 +501,7 @@ body{position:relative}
 .mundo-list span.hl{background:var(--ink);color:var(--cream);box-shadow:none}
 .mundo-cards{position:absolute;inset:0;z-index:2;pointer-events:none}
 .mc{position:absolute;width:var(--w);pointer-events:auto}
-.mc-par{will-change:transform;transition:transform .25s linear}
+.mc-par{transition:transform .25s linear}
 .mc-float{position:relative;animation:mcfloat calc(6s + var(--i) * .45s) ease-in-out infinite;animation-delay:calc(var(--i) * -.8s)}
 @keyframes mcfloat{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-12px) rotate(.6deg)}}
 .mc-card{margin:0;width:var(--w);height:var(--h);border-radius:26px;overflow:hidden;background:#eadfd6;box-shadow:0 24px 44px rgba(65,51,44,.18),0 0 0 6px rgba(255,255,255,.55);transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
@@ -650,7 +650,7 @@ footer h4{color:var(--red)}
 .news{overflow:hidden}
 .nv-track{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;align-items:start;padding-block:20px 40px}
 .nv-group{position:relative;height:520px}
-.nv-ph{position:absolute;margin:0;border-radius:22px;overflow:hidden;background:#eee;box-shadow:0 24px 50px rgba(40,28,22,.12);will-change:transform;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.nv-ph{position:absolute;margin:0;border-radius:22px;overflow:hidden;background:#eee;box-shadow:0 24px 50px rgba(40,28,22,.12);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
 .nv-ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
 .nv-ph.big{left:0;top:30px;width:72%;height:400px}
 .nv-ph.small{right:0;top:0;width:46%;height:200px;z-index:1}
@@ -658,7 +658,7 @@ footer h4{color:var(--red)}
 .nv-b .nv-ph.small{right:auto;left:0;top:20px}
 .nv-c .nv-ph.big{top:0}
 .nv-c .nv-ph.small{top:300px}
-.nv-card{position:absolute;z-index:2;right:4%;bottom:10px;width:62%;min-height:170px;padding:18px 20px 18px;border-radius:20px;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 22px 50px rgba(40,28,22,.14),inset 0 0 0 1px rgba(255,255,255,.8);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;will-change:transform;transition:transform .9s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
+.nv-card{position:absolute;z-index:2;right:4%;bottom:10px;width:62%;min-height:170px;padding:18px 20px 18px;border-radius:20px;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 22px 50px rgba(40,28,22,.14),inset 0 0 0 1px rgba(255,255,255,.8);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:12px;transition:transform .9s cubic-bezier(.2,.7,.2,1),box-shadow .5s}
 .nv-b .nv-card{right:auto;left:4%;bottom:40px}
 .nv-c .nv-card{right:auto;left:10%;bottom:0}
 .nv-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a776a;font-family:var(--f-body)}
@@ -725,7 +725,7 @@ footer h4{color:var(--red)}
 .arc-sec{position:relative;height:260vh;background:#fff;padding:0!important;overflow:visible}
 .arc-sticky{position:sticky;top:0;height:100vh;overflow:hidden}
 .arc-ring{position:absolute;left:50%;top:88%;width:0;height:0}
-.arc-card{position:absolute;left:0;top:0;margin:0;width:clamp(125px,11vw,180px);aspect-ratio:3/4;border-radius:22px;overflow:hidden;background:#eee;box-shadow:0 20px 40px rgba(40,28,22,.16),0 0 0 5px rgba(255,255,255,.7);will-change:transform,opacity;transform:translate(-50%,-50%)}
+.arc-card{position:absolute;left:0;top:0;margin:0;width:clamp(125px,11vw,180px);aspect-ratio:3/4;border-radius:22px;overflow:hidden;background:#eee;box-shadow:0 20px 40px rgba(40,28,22,.16),0 0 0 5px rgba(255,255,255,.7);transform:translate(-50%,-50%)}
 .arc-card img{width:100%;height:100%;object-fit:cover}
 .arc-text{position:absolute;left:50%;top:80%;transform:translate(-50%,-50%);width:min(760px,92%);text-align:center}
 .arc-text .mundo-title{font-size:clamp(30px,3.8vw,56px)}
@@ -878,7 +878,7 @@ img.fx.ok{opacity:1}
 body.hb-open .ingredients{opacity:0;pointer-events:none}
 
 /* banner: borda organica e respiro */
-.hbanner{-webkit-mask:linear-gradient(#000,#000) top/100% calc(100% - 109px) no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20110%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%200H1440V44C1300%2092%201150%2020%20960%2052C760%2086%20620%2018%20420%2048C260%2072%20120%2030%200%2058Z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E") bottom/100% 110px no-repeat;mask:linear-gradient(#000,#000) top/100% calc(100% - 109px) no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20110%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%200H1440V44C1300%2092%201150%2020%20960%2052C760%2086%20620%2018%20420%2048C260%2072%20120%2030%200%2058Z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E") bottom/100% 110px no-repeat}
+.hero.hb-on .hbanner{-webkit-mask:linear-gradient(#000,#000) top/100% calc(100% - 109px) no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20110%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%200H1440V44C1300%2092%201150%2020%20960%2052C760%2086%20620%2018%20420%2048C260%2072%20120%2030%200%2058Z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E") bottom/100% 110px no-repeat;mask:linear-gradient(#000,#000) top/100% calc(100% - 109px) no-repeat,url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201440%20110%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%200H1440V44C1300%2092%201150%2020%20960%2052C760%2086%20620%2018%20420%2048C260%2072%20120%2030%200%2058Z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E") bottom/100% 110px no-repeat}
 .hb-line{display:block;width:100%;height:110px;margin-top:-110px;position:relative;z-index:2;pointer-events:none;opacity:0;transition:opacity .6s ease .5s}
 .hb-line path{stroke-dasharray:0 100;transition:stroke-dasharray 1.6s cubic-bezier(.45,.05,.25,1) .6s}
 .hero.hb-on .hb-line{opacity:.7}
@@ -945,6 +945,9 @@ body.lb-lock{overflow:hidden}
 .hb-prev{left:calc(50% - 96px)}.hb-next{right:calc(50% - 96px)}
 .hb-dots{bottom:80px}
 @media (max-width:700px){.hb-arrow{bottom:48px;width:38px;height:38px}.hb-prev{left:calc(50% - 84px)}.hb-next{right:calc(50% - 84px)}.hb-dots{bottom:63px}}
+.hbanner{visibility:hidden;transition:height .9s cubic-bezier(.7,0,.2,1),visibility 0s linear .9s}
+.hero.hb-on .hbanner{visibility:visible;transition:height .9s cubic-bezier(.7,0,.2,1),visibility 0s}
+.hb-line{visibility:hidden}.hero.hb-on .hb-line{visibility:visible}
 </style>
 </head>
 <body>
