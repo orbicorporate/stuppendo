@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Stuppendo Gelateria: gelato artesanal com tradição italiana desde 1996.">
-<link rel="preload" as="image" href="img/logo-oval.webp"><link rel="preload" as="image" href="img/vitrine-morango.webp"><link rel="preload" as="image" href="img/copo-azul-hd.webp"><link rel="preload" as="image" href="img/chocolate-damasco.webp"><link rel="preload" as="image" href="img/tres-copos-hd.webp">
+<link rel="preload" as="image" href="img/logo-oval.webp"><link rel="preload" as="image" href="img/banner-copos.webp"><link rel="preload" as="image" href="img/vitrine-morango.webp"><link rel="preload" as="image" href="img/copo-azul-hd.webp"><link rel="preload" as="image" href="img/chocolate-damasco.webp"><link rel="preload" as="image" href="img/tres-copos-hd.webp">
 <title>Stuppendo Gelateria</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1119,7 +1119,7 @@ var d=document.createElement('pre');d.textContent=info.join('\n');d.style.cssTex
 <main>
   <section class="hero" id="inicio">
     <div class="hbanner" id="hBanner" aria-hidden="true" aria-roledescription="carrossel" aria-label="Banners Stuppendo">
-      <div class="hb-slide is-on" aria-roledescription="slide" aria-label="1 de 2"><img src="img/banner-copos.webp" alt="Oito copos de gelato Stuppendo com sabores variados" width="1920" height="1081" loading="lazy" decoding="async"></div>
+      <div class="hb-slide is-on" aria-roledescription="slide" aria-label="1 de 2"><img src="img/banner-copos.webp" alt="Oito copos de gelato Stuppendo com sabores variados" width="1920" height="1081" fetchpriority="high" decoding="async"></div>
       <div class="hb-slide hb-fit" aria-roledescription="slide" aria-label="2 de 2" aria-hidden="true"><img src="img/banner-criancas-2.webp" alt="Dia das Crianças Stuppendo: no Dia das Crianças, a Stuppendo presenteia com um livrinho de colorir e giz de cera pra criançada se divertir." width="1600" height="814" loading="lazy" decoding="async"></div>
       <button class="hb-arrow hb-prev" type="button" aria-label="Banner anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
       <button class="hb-arrow hb-next" type="button" aria-label="Próximo banner"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -1739,6 +1739,7 @@ document.addEventListener('visibilitychange',function(){if(!document.hidden)setT
 <script>(function(){var mq=matchMedia('(max-width:900px)'),tr=document.getElementById('hgTrack');if(!tr)return;var intro=tr.querySelector('.hg-intro')||document.querySelector('.hg-intro');if(!intro)return;
 function place(){if(mq.matches){if(intro.parentNode===tr){tr.parentNode.insertBefore(intro,tr);intro.classList.add('out')}}else if(intro.parentNode!==tr){tr.insertBefore(intro,tr.firstChild);intro.classList.remove('out')}}
 place();mq.addEventListener?mq.addEventListener('change',place):mq.addListener(place);})();</script>
+<script>(function(){var b=document.getElementById('hbToggle'),h=document.getElementById('inicio');if(b&&h&&!h.classList.contains('hb-on')){var sy=window.scrollTo;window.scrollTo=function(){};b.click();window.scrollTo=sy}})();</script>
 
 </body>
 </html>
