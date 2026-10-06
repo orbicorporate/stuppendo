@@ -3,7 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Stuppendo Gelateria: gelato artesanal com tradição italiana desde 1996.">
+<meta name="robots" content="noindex">
+<meta name="description" content="Stuppendo Gelateria">
 <link rel="preload" as="image" href="img/logo-oval.webp"><link rel="preload" as="image" href="img/banner-copos.webp"><link rel="preload" as="image" href="img/vitrine-morango.webp"><link rel="preload" as="image" href="img/copo-azul-hd.webp"><link rel="preload" as="image" href="img/chocolate-damasco.webp"><link rel="preload" as="image" href="img/tres-copos-hd.webp">
 <title>Stuppendo Gelateria</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1094,6 +1095,38 @@ html,body{margin:0;overflow-x:clip}
 </style>
 </head>
 <body>
+<div id="stpLock" role="dialog" aria-modal="true" aria-labelledby="stpLockTxt">
+<style>
+#stpLock{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;padding:24px;background:radial-gradient(60% 60% at 50% 40%,rgba(252,249,239,.92),rgba(248,241,236,.97));-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);animation:lkbg .6s ease both}
+#stpLock .lk-card{position:relative;width:min(460px,100%);padding:48px 36px 40px;border-radius:28px;background:#fff;text-align:center;box-shadow:0 40px 90px rgba(65,51,44,.18),0 0 0 1px rgba(65,51,44,.06);animation:lkin .9s cubic-bezier(.2,.8,.2,1) .1s both}
+#stpLock .lk-logo{position:relative;display:inline-block;width:220px;margin:0 auto 28px;animation:lkfloat 4.5s ease-in-out 1.2s infinite}
+#stpLock .lk-logo img{display:block;width:100%;height:auto;animation:lklogo 1.2s cubic-bezier(.2,.8,.2,1) .35s both}
+#stpLock .lk-logo::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.8) 50%,transparent 65%);background-size:250% 100%;-webkit-mask:url(img/logo-oval.webp) center/contain no-repeat;mask:url(img/logo-oval.webp) center/contain no-repeat;animation:lkshine 3.2s ease-in-out 1.4s infinite}
+#stpLock .lk-ring{position:absolute;left:50%;top:24px;width:280px;height:110px;transform:translateX(-50%);pointer-events:none}
+#stpLock .lk-ring path{fill:none;stroke:#b4702f;stroke-width:1.2;stroke-linecap:round;stroke-dasharray:0 100;animation:lkdraw 1.8s cubic-bezier(.45,.05,.25,1) .7s forwards;opacity:.55}
+#stpLock .lk-ic{width:46px;height:46px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;background:#f8f1ec;color:#922925;animation:lkup .7s ease .9s both}
+#stpLock .lk-ic svg{width:22px;height:22px}
+#stpLock p{margin:0;font:400 19px/1.45 "Sorts Mill Goudy",Georgia,serif;color:#41332c;animation:lkup .7s ease 1.05s both}
+#stpLock small{display:block;margin-top:18px;font:400 12px/1.4 -apple-system,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9a8a7e;animation:lkup .7s ease 1.2s both}
+html.stp-locked,html.stp-locked body{overflow:hidden!important}
+@keyframes lkbg{from{opacity:0}}
+@keyframes lkin{from{opacity:0;transform:translateY(24px) scale(.96)}}
+@keyframes lklogo{from{opacity:0;transform:scale(.8);filter:blur(6px)}}
+@keyframes lkfloat{50%{transform:translateY(-6px)}}
+@keyframes lkshine{0%{background-position:150% 0}60%,100%{background-position:-50% 0}}
+@keyframes lkdraw{to{stroke-dasharray:100 0}}
+@keyframes lkup{from{opacity:0;transform:translateY(10px)}}
+@media (prefers-reduced-motion:reduce){#stpLock *{animation:none!important}#stpLock .lk-ring path{stroke-dasharray:none}}
+</style>
+<div class="lk-card">
+<svg class="lk-ring" viewBox="0 0 290 120" aria-hidden="true"><path pathLength="100" d="M145 8C70 8 12 30 12 60s58 52 133 52 133-22 133-52S220 8 150 8"/></svg>
+<div class="lk-logo"><img src="img/logo-oval.webp" alt="Stuppendo" width="499" height="141"></div>
+<div class="lk-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+<p id="stpLockTxt">Solicite liberação para o servidor de hospedagem através do administrador.</p>
+<small>Stuppendo Gelateria</small>
+</div>
+</div>
+<script>(function(){var k='stp-acesso';try{if(/[?&]acesso=nume2026\b/.test(location.search))localStorage.setItem(k,'1');if(localStorage.getItem(k)==='1'){var l=document.getElementById('stpLock');l.parentNode.removeChild(l);return}}catch(e){}document.documentElement.classList.add('stp-locked');})();</script>
 <script>(function(){if(location.search.indexOf('diag')<0)return;var errs=[];addEventListener('error',function(e){errs.push((e.message||'res')+' '+(e.filename||e.target&&e.target.src||'').split('/').pop()+':'+(e.lineno||''))},true);
 setTimeout(function(){var h=document.querySelector('.hero'),h1=h.querySelector('h1'),x=innerWidth/2,y=Math.min(innerHeight*.35,h.getBoundingClientRect().bottom-20);
 var stack=(document.elementsFromPoint?document.elementsFromPoint(x,y):[]).slice(0,6).map(function(e){return e.tagName+'.'+String(e.className&&e.className.baseVal!==undefined?e.className.baseVal:e.className).slice(0,30)});
