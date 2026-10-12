@@ -577,6 +577,11 @@ html.stp-locked,html.stp-locked body{overflow:hidden!important}
 @keyframes lkdraw{to{stroke-dasharray:100 0}}
 @keyframes lkup{from{opacity:0;transform:translateY(10px)}}
 @media (prefers-reduced-motion:reduce){#stpLock *{animation:none!important}#stpLock .lk-ring path{stroke-dasharray:none}}
+.s3{font-size:clamp(46px,7.6vw,128px);line-height:1}
+.s3.l2{font:400 clamp(16px,2.1vw,32px)/1.2 var(--f-body);letter-spacing:.34em;text-transform:uppercase;text-align:left;margin-top:-.2em;padding-left:.2em;color:var(--gold-d)}
+.s3.l2 span{padding:.2em .3em .2em 0}
+.vt3{padding-top:clamp(30px,4vw,60px);padding-bottom:clamp(30px,4vw,60px)}
+@media(max-width:700px){.s3{font-size:clamp(44px,14vw,80px)}.s3.l2{font-size:clamp(13px,3.6vw,18px);letter-spacing:.26em;margin-top:-.1em}}
 </style>
 <div class="lk-card">
 <svg class="lk-ring" viewBox="0 0 290 120" aria-hidden="true"><path pathLength="100" d="M145 8C70 8 12 30 12 60s58 52 133 52 133-22 133-52S220 8 150 8"/></svg>
