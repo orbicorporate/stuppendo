@@ -415,3 +415,7 @@ header,footer{color:var(--cream)}
 .so6 .stt span{display:block;margin-top:12px;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-d);line-height:1.6}
 @media(max-width:900px){.so1g,.so2g{grid-template-columns:1fr}.so4{grid-template-columns:1fr 1fr}.so4 .h2,.so4 .h4{margin-top:0}.so5g{grid-template-columns:1fr}.so5g .ph{min-height:220px}.so6 .stt{grid-template-columns:1fr}.so2t .small{width:60%}}
 .so2g .sf.big{max-width:420px;justify-self:end;width:100%}
+.so2g{grid-template-columns:1fr minmax(0,380px);justify-content:space-between;align-items:center}
+.so2g .sf.big{max-width:380px;justify-self:end}
+.so2g .sf.big figcaption{text-align:left}
+@media(max-width:900px){.so2g{grid-template-columns:1fr}.so2g .sf.big{justify-self:start;max-width:320px}}
