@@ -582,6 +582,20 @@ html.stp-locked,html.stp-locked body{overflow:hidden!important}
 .s3.l2 span{padding:.2em .3em .2em 0}
 .vt3{padding-top:clamp(30px,4vw,60px);padding-bottom:clamp(30px,4vw,60px)}
 @media(max-width:700px){.s3{font-size:clamp(44px,14vw,80px)}.s3.l2{font-size:clamp(13px,3.6vw,18px);letter-spacing:.26em;margin-top:-.1em}}
+/* dual minimalista */
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:clamp(70px,8vw,120px) max(24px,calc((100vw - var(--w))/2));background:var(--cream)}
+.dual>.dc,.dual>.dc:first-child,.dual>.d2{background:transparent!important;color:var(--ink);border:0;border-radius:0;min-height:0;overflow:visible;padding:8px clamp(24px,4vw,64px);display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0}
+.dual>.dc:first-child{padding-left:0;border-right:1px solid rgba(176,144,79,.45)}
+.dual>.d2{padding-right:0}
+.dual .dn{font:400 .8rem/1 var(--f-body);letter-spacing:.2em;color:var(--gold-d);margin-bottom:26px}
+.dual .small{color:var(--gold-d);letter-spacing:.2em;text-transform:uppercase;font-size:.72rem}
+.dual h2.tt{color:var(--red);margin-top:14px;margin-bottom:34px;font-size:clamp(1.6rem,2.6vw,2.4rem);max-width:14em;letter-spacing:-.02em;line-height:1.08}
+.dual .dsub{margin:14px 0 0;opacity:.7;font-size:.95rem;color:var(--ink)}
+.dual .dl{margin-top:auto;font-size:.92rem;color:var(--red);border-bottom:1px solid var(--red);padding-bottom:4px;transition:.3s}
+.dual .dl i{font-style:normal;display:inline-block;transition:transform .3s}
+.dual .dl:hover{color:var(--gold-d);border-color:var(--gold-d)}.dual .dl:hover i{transform:translateX(5px)}
+@media(max-width:700px){.dual{grid-template-columns:1fr;padding:56px 24px}.dual>.dc:first-child{border-right:0;border-bottom:1px solid rgba(176,144,79,.45);padding:0 0 40px}.dual>.d2{padding:40px 0 0}}
+.hero h1{font-size:clamp(2rem,4.2vw,4.3rem)}
 </style>
 <div class="lk-card">
 <svg class="lk-ring" viewBox="0 0 290 120" aria-hidden="true"><path pathLength="100" d="M145 8C70 8 12 30 12 60s58 52 133 52 133-22 133-52S220 8 150 8"/></svg>
@@ -672,8 +686,8 @@ html.stp-locked,html.stp-locked body{overflow:hidden!important}
 
 
 <section class="dual">
-<div><div class="dpic"><img src="img/mundo/eventos-buffet.webp" alt="Buffet de gelato Stuppendo em evento" loading="lazy"></div><div><div class="small">Eventos</div><h2 class="tt" style="margin-top:16px">Seu evento com um buffet de gelato</h2></div><div><a class="btn g" href="eventos">Conhecer eventos →</a></div></div>
-<div class="d2"><div class="dpic"><img src="img/lojas/moema.jpg" alt="Loja Stuppendo em Moema" loading="lazy"></div><div><div class="small">Franqueados</div><h2 class="tt" style="margin-top:16px">Seja um franqueado Stuppendo</h2><div class="fst"><b>8</b><span>lojas em<br>4 estados</span></div></div><div><a class="btn r" href="franqueados">Quero saber mais →</a></div></div>
+<div class="dc"><span class="dn">01</span><div class="small">Eventos</div><h2 class="tt">Seu evento com um buffet de gelato</h2><a class="dl" href="eventos">Conhecer eventos <i>→</i></a></div>
+<div class="dc d2"><span class="dn">02</span><div class="small">Franqueados</div><h2 class="tt">Seja um franqueado Stuppendo</h2><p class="dsub">8 lojas em 4 estados</p><a class="dl" href="franqueados">Quero saber mais <i>→</i></a></div>
 </section>
 
 <footer><div class="wrap"><div class="fg">
