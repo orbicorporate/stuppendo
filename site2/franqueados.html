@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Franqueados | Stuppendo Gelateria</title>
+<meta name="description" content="Seja um franqueado Stuppendo: do quiosque em shopping à casa com jardim.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="pages.css">
+</head><body>
+<div id="stpLock" role="dialog" aria-modal="true" aria-labelledby="stpLockTxt">
+<style>
+#stpLock{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;padding:24px;background:radial-gradient(60% 60% at 50% 40%,rgba(252,249,239,.92),rgba(248,241,236,.97));-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);animation:lkbg .6s ease both}
+#stpLock .lk-card{position:relative;width:min(460px,100%);padding:48px 36px 40px;border-radius:28px;background:#fff;text-align:center;box-shadow:0 40px 90px rgba(65,51,44,.18),0 0 0 1px rgba(65,51,44,.06);animation:lkin .9s cubic-bezier(.2,.8,.2,1) .1s both}
+#stpLock .lk-logo{position:relative;display:inline-block;width:220px;margin:0 auto 28px;animation:lkfloat 4.5s ease-in-out 1.2s infinite}
+#stpLock .lk-logo img{display:block;width:100%;height:auto;animation:lklogo 1.2s cubic-bezier(.2,.8,.2,1) .35s both}
+#stpLock .lk-logo::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.8) 50%,transparent 65%);background-size:250% 100%;-webkit-mask:url(img/logo-oval.webp) center/contain no-repeat;mask:url(img/logo-oval.webp) center/contain no-repeat;animation:lkshine 3.2s ease-in-out 1.4s infinite}
+#stpLock .lk-ring{position:absolute;left:50%;top:24px;width:280px;height:110px;transform:translateX(-50%);pointer-events:none}
+#stpLock .lk-ring path{fill:none;stroke:#b4702f;stroke-width:1.2;stroke-linecap:round;stroke-dasharray:0 100;animation:lkdraw 1.8s cubic-bezier(.45,.05,.25,1) .7s forwards;opacity:.55}
+#stpLock .lk-ic{width:46px;height:46px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;background:#f8f1ec;color:#922925;animation:lkup .7s ease .9s both}
+#stpLock .lk-ic svg{width:22px;height:22px}
+#stpLock p{margin:0;font:400 19px/1.45 "Sorts Mill Goudy",Georgia,serif;color:#41332c;animation:lkup .7s ease 1.05s both}
+#stpLock small{display:block;margin-top:18px;font:400 12px/1.4 -apple-system,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9a8a7e;animation:lkup .7s ease 1.2s both}
+html.stp-locked,html.stp-locked body{overflow:hidden!important}
+@keyframes lkbg{from{opacity:0}}
+@keyframes lkin{from{opacity:0;transform:translateY(24px) scale(.96)}}
+@keyframes lklogo{from{opacity:0;transform:scale(.8);filter:blur(6px)}}
+@keyframes lkfloat{50%{transform:translateY(-6px)}}
+@keyframes lkshine{0%{background-position:150% 0}60%,100%{background-position:-50% 0}}
+@keyframes lkdraw{to{stroke-dasharray:100 0}}
+@keyframes lkup{from{opacity:0;transform:translateY(10px)}}
+@media (prefers-reduced-motion:reduce){#stpLock *{animation:none!important}#stpLock .lk-ring path{stroke-dasharray:none}}
+</style>
+<div class="lk-card">
+<svg class="lk-ring" viewBox="0 0 290 120" aria-hidden="true"><path pathLength="100" d="M145 8C70 8 12 30 12 60s58 52 133 52 133-22 133-52S220 8 150 8"/></svg>
+<div class="lk-logo"><img src="img/logo-oval.webp" alt="Stuppendo" width="499" height="141"></div>
+<div class="lk-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+<p id="stpLockTxt">Solicite liberação para o servidor de hospedagem através do administrador.</p>
+<small>Stuppendo Gelateria</small>
+</div>
+</div>
+<script>(function(){var k='stp-acesso';try{if(/[?&]acesso=nume2026\b/.test(location.search))localStorage.setItem(k,'1');if(localStorage.getItem(k)==='1'){var l=document.getElementById('stpLock');l.parentNode.removeChild(l);return}}catch(e){}document.documentElement.classList.add('stp-locked');})();</script>
+
+
+<header id="hd"><div class="wrap hd">
+<a href="./"><img class="lg" src="img/logo-oval.webp" alt="Stuppendo"></a>
+<nav id="nv"><a href="produtos.html">Produtos</a><a href="eventos.html">Eventos</a><a href="franqueados.html" aria-current="page" style="color:var(--gold)">Franqueados</a><a href="unidades.html">Unidades</a><a href="sobre.html">Sobre nós</a></nav>
+<div class="hr"><div class="sw" title="Alternar versão do site"><a href="../">SITE 1</a><span>SITE 2</span></div><button class="bg" id="bg" aria-label="Menu">☰</button></div>
+</div></header>
+<main>
+<section class="lh bn"><img class="hbg" data-px="-.06" src="img/gal/chocolate-faixa.webp" alt="" style="object-position:50% 50%"><div class="iw"><div class="bc" data-r><a href="index.html">Início</a> / <span>Franqueados</span></div><h1 data-r style="--d:1">Seja um franqueado <em>Stuppendo</em></h1><p data-r style="--d:2">Leve a Stuppendo para a sua cidade. Do quiosque em shopping à casa com jardim, cada loja nasce com a mesma vitrine de gelato artesanal e o jeito Stuppendo de receber.</p></div></section><div class="mq" aria-hidden="true"><div><span>Quiosque</span><span>Loja</span><span>Casa</span><span>Carrinho</span><span>Tradição da gelateria italiana</span><span>Lojas em quatro estados</span><span>Quiosque</span><span>Loja</span><span>Casa</span><span>Carrinho</span><span>Tradição da gelateria italiana</span><span>Lojas em quatro estados</span></div></div><section class="sc"><div class="wrap"><div class="hh"><span class="eb2" data-r>A marca</span><h2 class="dh" data-r style="--d:1">Uma tradição que <em>cabe na sua cidade</em></h2></div><div class="fx" data-r><div><b>Formatos</b><span>Quiosque, loja, casa e carrinho</span></div><div><b>Desde 1996</b><span>Tradição da gelateria italiana</span></div><div><b>Presença</b><span>Lojas em quatro estados</span></div></div></div></section><section class="sc fmx"><div class="wrap"><div class="hh c"><span class="eb2" data-r>Nossos formatos</span><h2 class="dh" data-r style="--d:1">Cada loja, <em>um jeito de receber</em></h2></div><div class="fm"><figure data-r style="--d:0"><img src="img/lojas/moema.jpg" alt="Formato Casa com jardim: unidade Stuppendo" loading="lazy"><i class="no">01</i><figcaption><small>Formato</small>Casa com jardim</figcaption></figure><figure data-r style="--d:1"><img src="img/lojas/vila-madalena.jpg" alt="Formato Loja de esquina: unidade Stuppendo" loading="lazy"><i class="no">02</i><figcaption><small>Formato</small>Loja de esquina</figcaption></figure><figure data-r style="--d:2"><img src="img/lojas/campo-grande.jpg" alt="Formato Loja em shopping: unidade Stuppendo" loading="lazy"><i class="no">03</i><figcaption><small>Formato</small>Loja em shopping</figcaption></figure><figure data-r style="--d:0"><img src="img/lojas/barra.jpg" alt="Formato Quiosque em shopping: unidade Stuppendo" loading="lazy"><i class="no">04</i><figcaption><small>Formato</small>Quiosque em shopping</figcaption></figure><figure data-r style="--d:1"><img src="img/lojas/sirio.jpg" alt="Formato Carrinho: unidade Stuppendo" loading="lazy"><i class="no">05</i><figcaption><small>Formato</small>Carrinho</figcaption></figure><figure data-r style="--d:2"><img src="img/lojas/santo-andre.jpg" alt="Formato Pátio com jardim: unidade Stuppendo" loading="lazy"><i class="no">06</i><figcaption><small>Formato</small>Pátio com jardim</figcaption></figure><figure data-r style="--d:0"><img src="img/lojas/vila-leopoldina.jpg" alt="Formato Fachada iluminada: unidade Stuppendo" loading="lazy"><i class="no">07</i><figcaption><small>Formato</small>Fachada iluminada</figcaption></figure><figure data-r style="--d:1"><img src="img/lojas/londrina.jpg" alt="Formato Varanda de rua: unidade Stuppendo" loading="lazy"><i class="no">08</i><figcaption><small>Formato</small>Varanda de rua</figcaption></figure><figure data-r style="--d:2"><img src="img/lojas/rio-verde.jpg" alt="Formato Novo projeto: unidade Stuppendo" loading="lazy"><i class="no">09</i><figcaption><small>Formato</small>Novo projeto</figcaption></figure></div></div></section><section class="cta"><div class="wrap"><span class="eb" data-r>Stuppendo Gelateria</span><h2 class="dh" data-r style="--d:1">Leve a <em>Stuppendo</em> para a sua cidade</h2><p class="lead" data-r style="--d:2">Fale com a gente e conheça os formatos de franquia.</p><a class="btn g" data-r style="--d:3" href="https://wa.me/551150932967?text=Ol%C3%A1%2C%20quero%20saber%20sobre%20a%20franquia%20Stuppendo" target="_blank" rel="noopener">Quero ser franqueado <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></section>
+</main>
+<footer><div class="wrap"><div class="fg">
+<div><img src="img/logo-oval.webp" alt="Stuppendo"><p>Gelateria italiana desde 1996. Loja matriz: Rua Canário, 1321, Moema, São Paulo.</p></div>
+<div><h4>Site</h4><ul><li><a href="produtos.html">Produtos</a></li><li><a href="eventos.html">Eventos</a></li><li><a href="franqueados.html">Franqueados</a></li><li><a href="unidades.html">Unidades</a></li><li><a href="sobre.html">Sobre nós</a></li></ul></div>
+<div><h4>Contato</h4><ul><li><a href="https://wa.me/551150932967" target="_blank" rel="noopener">WhatsApp eventos</a></li><li><a href="https://instagram.com/stuppendo" target="_blank" rel="noopener">@stuppendo</a></li></ul></div>
+<div><h4>Versões</h4><ul><li><a href="../">Site 1</a></li><li>Site 2 (esta)</li></ul></div>
+</div><div class="cp"><span>© Stuppendo Gelateria</span><span>Desenvolvido por Nume Company</span></div></div></footer>
+<script src="site.js"></script><script src="zoom.js"></script>
+</body></html>
