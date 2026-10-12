@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="pt-BR"><head>
-<script>(function(){var p=location.pathname;if(/^\/stuppendo\/site2\/?$/.test(p))location.replace('/stuppendo/site2/home'+location.search+location.hash)})();</script>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<script>(function(){var p=location.pathname;if(/^\/stuppendo\/site2\/?$/.test(p))location.replace('/stuppendo/site2/home'+location.search+location.hash)})();</script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Stuppendo Gelateria</title>
 <meta name="description" content="Stuppendo Gelateria, tradição italiana desde 1996. Gelatos artesanais, bolos, doces e cafés em 8 lojas.">
 <meta name="robots" content="noindex">
@@ -554,6 +553,27 @@ footer{background:linear-gradient(180deg,#741c19,#5a1412 70%)}
 .bg3 .col:nth-child(2)>:nth-child(3){height:clamp(200px,20vw,280px)}
 .bg3 .col+.col{padding-top:clamp(60px,10vw,150px)}
 @media(max-width:700px){.bg3 .col>*{height:auto!important}.bg3 .bi{height:300px!important}.bg3 .bi:nth-of-type(odd){height:360px!important}.bs{min-height:200px}}
+.s3{font-size:clamp(46px,7.6vw,128px);line-height:1}
+.s3.l2{font:400 clamp(16px,2.1vw,32px)/1.2 var(--f-body);letter-spacing:.34em;text-transform:uppercase;text-align:left;margin-top:-.2em;padding-left:.2em;color:var(--gold-d)}
+.s3.l2 span{padding:.2em .3em .2em 0}
+.vt3{padding-top:clamp(30px,4vw,60px);padding-bottom:clamp(30px,4vw,60px)}
+@media(max-width:700px){.s3{font-size:clamp(44px,14vw,80px)}.s3.l2{font-size:clamp(13px,3.6vw,18px);letter-spacing:.26em;margin-top:-.1em}}
+/* dual minimalista */
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:clamp(70px,8vw,120px) max(24px,calc((100vw - var(--w))/2));background:var(--cream)}
+.dual>.dc,.dual>.dc:first-child,.dual>.d2{background:transparent!important;color:var(--ink);border:0;border-radius:0;min-height:0;overflow:visible;padding:8px clamp(24px,4vw,64px);display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0}
+.dual>.dc:first-child{padding-left:0;border-right:1px solid rgba(176,144,79,.45)}
+.dual>.d2{padding-right:0}
+.dual .dn{font:400 .8rem/1 var(--f-body);letter-spacing:.2em;color:var(--gold-d);margin-bottom:26px}
+.dual .small{color:var(--gold-d);letter-spacing:.2em;text-transform:uppercase;font-size:.72rem}
+.dual h2.tt{color:var(--red);margin-top:14px;margin-bottom:34px;font-size:clamp(1.6rem,2.6vw,2.4rem);max-width:14em;letter-spacing:-.02em;line-height:1.08}
+.dual .dsub{margin:14px 0 0;opacity:.7;font-size:.95rem;color:var(--ink)}
+.dual .dl{margin-top:auto;font-size:.92rem;color:var(--red);border-bottom:1px solid var(--red);padding-bottom:4px;transition:.3s}
+.dual .dl i{font-style:normal;display:inline-block;transition:transform .3s}
+.dual .dl:hover{color:var(--gold-d);border-color:var(--gold-d)}.dual .dl:hover i{transform:translateX(5px)}
+@media(max-width:700px){.dual{grid-template-columns:1fr;padding:56px 24px}.dual>.dc:first-child{border-right:0;border-bottom:1px solid rgba(176,144,79,.45);padding:0 0 40px}.dual>.d2{padding:40px 0 0}}
+.hero h1{font-size:clamp(2rem,4.2vw,4.3rem)}
+.uph:before,.uph:after,footer:before{display:none!important;content:none!important}
+.lh:after,.cta:before,.duo:before,.duo:after,.phero:after{display:none!important;content:none!important}
 </style></head><body>
 <div id="stpLock" role="dialog" aria-modal="true" aria-labelledby="stpLockTxt">
 <style>
@@ -609,11 +629,10 @@ html.stp-locked,html.stp-locked body{overflow:hidden!important}
 </div>
 <script>(function(){var k='stp-acesso';try{if(/[?&]acesso=nume2026\b/.test(location.search))localStorage.setItem(k,'1');if(localStorage.getItem(k)==='1'){var l=document.getElementById('stpLock');l.parentNode.removeChild(l);return}}catch(e){}document.documentElement.classList.add('stp-locked');})();</script>
 
-
 <header id="hd"><div class="wrap hd">
 <a href="home"><img class="lg" src="img/logo-oval.webp" alt="Stuppendo"></a>
 <nav id="nv"><a href="produtos">Produtos</a><a href="eventos">Eventos</a><a href="franqueados">Franqueados</a><a href="unidades">Unidades</a><a href="sobre">Sobre nós</a></nav>
-<div class="hr"><div class="sw" title="Alternar versão do site"><a href="../">SITE 1</a><span>SITE 2</span></div><button class="bg" id="bg" aria-label="Menu">☰</button></div>
+<div class="hr"><div class="sw" title="Alternar versão do site"><a href="../">V1</a><span>V2</span></div><button class="bg" id="bg" aria-label="Menu">☰</button></div>
 </div></header>
 
 <section class="hb" aria-roledescription="carousel" aria-label="Destaques">
@@ -696,7 +715,7 @@ html.stp-locked,html.stp-locked body{overflow:hidden!important}
 <div><img src="img/logo-oval.webp" alt="Stuppendo"><p>Gelateria italiana desde 1996. Loja matriz: Rua Canário, 1321, Moema, São Paulo.</p></div>
 <div><h4>Site</h4><ul><li><a href="produtos">Produtos</a></li><li><a href="eventos">Eventos</a></li><li><a href="franqueados">Franqueados</a></li><li><a href="unidades">Unidades</a></li><li><a href="sobre">Sobre nós</a></li></ul></div>
 <div><h4>Contato</h4><ul><li><a href="https://wa.me/551150932967" target="_blank" rel="noopener">WhatsApp eventos</a></li><li><a href="https://instagram.com/stuppendo" target="_blank" rel="noopener">@stuppendo</a></li></ul></div>
-<div><h4>Versões</h4><ul><li><a href="../">Site 1</a></li><li>Site 2 (esta)</li></ul></div>
+<div><h4>Versões</h4><ul><li><a href="../">V1</a></li><li>V2 (esta)</li></ul></div>
 </div><div class="cp"><span>© Stuppendo Gelateria</span><span>Desenvolvido por Nume Company</span></div></div></footer>
 
 <div class="bsw" role="group" aria-label="Estilo do topo"><span>Topo</span><button type="button" data-b="0" aria-pressed="true">Clássico</button><button type="button" data-b="1" aria-pressed="false">Banner</button></div>
