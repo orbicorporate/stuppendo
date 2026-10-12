@@ -368,3 +368,4 @@ header,footer{color:var(--cream)}
 .uc .ct{font-size:.62rem;letter-spacing:.22em}
 .uc .ad{margin-top:8px;font-size:.9rem}
 .uc .ac a{width:38px;height:38px}.uc .ac a svg{width:17px;height:17px}
+.lh:after,.cta:before,.duo:before,.duo:after,.phero:after{display:none!important;content:none!important}
