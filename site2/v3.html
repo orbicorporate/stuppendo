@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stuppendo Gelateria | V3</title>
+<meta name="description" content="Gelato artesanal italiano desde 1996. Oito lojas em São Paulo, Rio de Janeiro, Mato Grosso do Sul e Paraná.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&family=Inter+Tight:wght@300;400&display=swap">
+<link rel="stylesheet" href="v3.css">
+</head>
+<body><div id="stpLock" role="dialog" aria-modal="true" aria-labelledby="stpLockTxt">
+<style>
+#stpLock{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;padding:24px;background:radial-gradient(60% 60% at 50% 40%,rgba(252,249,239,.92),rgba(248,241,236,.97));-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);animation:lkbg .6s ease both}
+#stpLock .lk-card{position:relative;width:min(460px,100%);padding:48px 36px 40px;border-radius:28px;background:#fff;text-align:center;box-shadow:0 40px 90px rgba(65,51,44,.18),0 0 0 1px rgba(65,51,44,.06);animation:lkin .9s cubic-bezier(.2,.8,.2,1) .1s both}
+#stpLock .lk-logo{position:relative;display:inline-block;width:220px;margin:0 auto 28px;animation:lkfloat 4.5s ease-in-out 1.2s infinite}
+#stpLock .lk-logo img{display:block;width:100%;height:auto;animation:lklogo 1.2s cubic-bezier(.2,.8,.2,1) .35s both}
+#stpLock .lk-logo::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.8) 50%,transparent 65%);background-size:250% 100%;-webkit-mask:url(img/logo-oval.webp) center/contain no-repeat;mask:url(img/logo-oval.webp) center/contain no-repeat;animation:lkshine 3.2s ease-in-out 1.4s infinite}
+#stpLock .lk-ring{position:absolute;left:50%;top:24px;width:280px;height:110px;transform:translateX(-50%);pointer-events:none}
+#stpLock .lk-ring path{fill:none;stroke:#b4702f;stroke-width:1.2;stroke-linecap:round;stroke-dasharray:0 100;animation:lkdraw 1.8s cubic-bezier(.45,.05,.25,1) .7s forwards;opacity:.55}
+#stpLock .lk-ic{width:46px;height:46px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;background:#f8f1ec;color:#922925;animation:lkup .7s ease .9s both}
+#stpLock .lk-ic svg{width:22px;height:22px}
+#stpLock p{margin:0;font:400 19px/1.45 "Sorts Mill Goudy",Georgia,serif;color:#41332c;animation:lkup .7s ease 1.05s both}
+#stpLock small{display:block;margin-top:18px;font:400 12px/1.4 -apple-system,system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9a8a7e;animation:lkup .7s ease 1.2s both}
+html.stp-locked,html.stp-locked body{overflow:hidden!important}
+@keyframes lkbg{from{opacity:0}}
+@keyframes lkin{from{opacity:0;transform:translateY(24px) scale(.96)}}
+@keyframes lklogo{from{opacity:0;transform:scale(.8);filter:blur(6px)}}
+@keyframes lkfloat{50%{transform:translateY(-6px)}}
+@keyframes lkshine{0%{background-position:150% 0}60%,100%{background-position:-50% 0}}
+@keyframes lkdraw{to{stroke-dasharray:100 0}}
+@keyframes lkup{from{opacity:0;transform:translateY(10px)}}
+@media (prefers-reduced-motion:reduce){#stpLock *{animation:none!important}#stpLock .lk-ring path{stroke-dasharray:none}}
+.s3{font-size:clamp(46px,7.6vw,128px);line-height:1}
+.s3.l2{font:400 clamp(16px,2.1vw,32px)/1.2 var(--f-body);letter-spacing:.34em;text-transform:uppercase;text-align:left;margin-top:-.2em;padding-left:.2em;color:var(--gold-d)}
+.s3.l2 span{padding:.2em .3em .2em 0}
+.vt3{padding-top:clamp(30px,4vw,60px);padding-bottom:clamp(30px,4vw,60px)}
+@media(max-width:700px){.s3{font-size:clamp(44px,14vw,80px)}.s3.l2{font-size:clamp(13px,3.6vw,18px);letter-spacing:.26em;margin-top:-.1em}}
+/* dual minimalista */
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:clamp(70px,8vw,120px) max(24px,calc((100vw - var(--w))/2));background:var(--cream)}
+.dual>.dc,.dual>.dc:first-child,.dual>.d2{background:transparent!important;color:var(--ink);border:0;border-radius:0;min-height:0;overflow:visible;padding:8px clamp(24px,4vw,64px);display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:0}
+.dual>.dc:first-child{padding-left:0;border-right:1px solid rgba(176,144,79,.45)}
+.dual>.d2{padding-right:0}
+.dual .dn{font:400 .8rem/1 var(--f-body);letter-spacing:.2em;color:var(--gold-d);margin-bottom:26px}
+.dual .small{color:var(--gold-d);letter-spacing:.2em;text-transform:uppercase;font-size:.72rem}
+.dual h2.tt{color:var(--red);margin-top:14px;margin-bottom:34px;font-size:clamp(1.6rem,2.6vw,2.4rem);max-width:14em;letter-spacing:-.02em;line-height:1.08}
+.dual .dsub{margin:14px 0 0;opacity:.7;font-size:.95rem;color:var(--ink)}
+.dual .dl{margin-top:auto;font-size:.92rem;color:var(--red);border-bottom:1px solid var(--red);padding-bottom:4px;transition:.3s}
+.dual .dl i{font-style:normal;display:inline-block;transition:transform .3s}
+.dual .dl:hover{color:var(--gold-d);border-color:var(--gold-d)}.dual .dl:hover i{transform:translateX(5px)}
+@media(max-width:700px){.dual{grid-template-columns:1fr;padding:56px 24px}.dual>.dc:first-child{border-right:0;border-bottom:1px solid rgba(176,144,79,.45);padding:0 0 40px}.dual>.d2{padding:40px 0 0}}
+.hero h1{font-size:clamp(2rem,4.2vw,4.3rem)}
+.uph:before,.uph:after,footer:before{display:none!important;content:none!important}
+.lh:after,.cta:before,.duo:before,.duo:after,.phero:after{display:none!important;content:none!important}
+</style>
+<div class="lk-card">
+<svg class="lk-ring" viewBox="0 0 290 120" aria-hidden="true"><path pathLength="100" d="M145 8C70 8 12 30 12 60s58 52 133 52 133-22 133-52S220 8 150 8"/></svg>
+<div class="lk-logo"><img src="img/logo-oval.webp" alt="Stuppendo" width="499" height="141"></div>
+<div class="lk-ic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 11V8a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+<p id="stpLockTxt">Solicite liberação para o servidor de hospedagem através do administrador.</p>
+<small>Stuppendo Gelateria</small>
+</div>
+</div>
+<script>(function(){var k='stp-acesso';try{if(/[?&]acesso=nume2026\b/.test(location.search))localStorage.setItem(k,'1');if(localStorage.getItem(k)==='1'){var l=document.getElementById('stpLock');l.parentNode.removeChild(l);return}}catch(e){}document.documentElement.classList.add('stp-locked');})();</script>
+<header class="hd" id="hd">
+  <nav aria-label="Principal"><a class="x" href="produtos">Produtos</a><a class="x" href="eventos">Eventos</a></nav>
+  <a class="lg" href="v3" aria-label="Stuppendo"><img src="img/logo-oval.webp" alt="Stuppendo"></a>
+  <nav class="r" aria-label="Lojas"><a class="x" href="unidades">Unidades</a><span class="vs3"><a href="../">V1</a><a href="home">V2</a><a class="on" href="v3">V3</a></span></nav>
+</header>
+<main>
+<section class="hero">
+  <div class="hb"><div class="im" data-src="img/banner-copos.webp" data-pos="50% 55%" style="--c:#b9856f"></div></div>
+  <div>
+    <p class="mono">Stuppendo Gelateria · Moema</p>
+    <h1 aria-label="Feito à mão"><span style="--i:0">Feito</span><span style="--i:1">à mão</span></h1>
+    <p class="sub">Gelato artesanal todos os dias, com ingredientes selecionados.</p>
+  </div>
+  <span class="vt mono">Desde 1996 · São Paulo</span>
+  <i class="sc" aria-hidden="true"></i>
+</section>
+<section class="sec" style="padding-bottom:clamp(40px,6vw,90px)">
+  <div class="duo" style="align-items:center">
+    <div class="rv" style="grid-column:1/6;text-align:center"><p class="ti" style="font-size:clamp(60px,9vw,140px);font-style:italic">Stuppendo</p><p class="mono" style="margin-top:6px;color:var(--mut)">Gelateria · desde 1996</p></div>
+    <div class="lead rv" style="grid-column:8/13" data-d=".15"><p>Tradição italiana, criação brasileira.</p><p>Gelatos artesanais, ingredientes selecionados e cuidado em cada detalhe. Um lugar gostoso de estar.</p></div>
+  </div>
+</section>
+<section class="sec" style="padding-top:clamp(30px,4vw,60px)">
+  <h2 class="hs rv">O jeito Stuppendo</h2>
+  <div class="tri">
+    <div data-fig="0" data-r=".95" class="c" data-p="40"></div>
+    <div data-fig="1" data-r=".68" class="c" data-p="-30"></div>
+    <div data-fig="2" data-r=".95" class="c" data-p="50"></div>
+  </div>
+</section>
+<section class="sec" id="gelatos">
+  <div class="ch">
+    <div class="a"><div data-fig="3" data-r=".82" data-cap="0" data-p="30"></div></div>
+    <i class="seal" id="s1" data-t="Stuppendo Gelateria · Moema · desde 1996 · " style="left:calc(41.7% - 60px);top:44%"></i>
+    <div class="b">
+      <div class="hd2"><div><p class="kk mono rv">Produto I</p><h2 class="ti rv" style="margin-top:14px">O <em>gelato</em></h2></div><span class="no rv">01</span></div>
+      <p class="tx rv">Feitos todos os dias na técnica italiana, dos clássicos às criações da casa. Mais de 45 sabores artesanais que mudam com a estação.</p>
+    </div>
+  </div>
+</section>
+<section class="sec" id="mesa">
+  <div class="duo">
+    <div class="t"><p class="kk mono rv">Produto II</p><h2 class="ti rv" style="margin-top:14px">Doces, bolos <em>e cafés</em></h2>
+      <div class="lead rv"><p>Cannoli, brigadeiros e doces finos para acompanhar o gelato, bolos da casa e espresso para uma pausa completa.</p></div></div>
+    <div class="p1" data-fig="4" data-r="1.35" data-p="24"></div>
+    <div class="p2" data-fig="5" data-r=".72" data-p="-20"></div>
+    <div class="p3" data-fig="6" data-r=".72" data-p="36"></div>
+  </div>
+</section>
+<section class="sec" style="padding-left:0;padding-right:0;padding-top:20px;overflow:hidden">
+  <h2 class="hs rv">Sabores da vitrine</h2>
+  <div class="crw" data-cr="7,8,9,10,11,12,13"></div>
+</section>
+<section class="band">
+  <div class="hb" data-p="40"><div class="im" data-src="img/tres-copos-hd.webp" data-pos="50% 62%" style="--c:#a56a58"></div></div>
+  <div>
+    <p class="mono rv" style="opacity:.85">Unidades</p>
+    <h2 class="ti rv" style="margin-top:12px">Encontre a sua<br><em>Stuppendo</em></h2>
+    <p class="rv">Oito lojas em São Paulo, Rio de Janeiro, Mato Grosso do Sul e Paraná.</p>
+    <a class="btn rv" href="unidades">Encontrar uma loja <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+  </div>
+</section>
+<footer class="ft mono"><a href="franqueados">Seja um franqueado</a> &nbsp;·&nbsp; <a href="eventos">Eventos</a> &nbsp;·&nbsp; <a href="sobre">Sobre nós</a><span class="cp">© Stuppendo Gelateria · Desenvolvido por Nume Company</span></footer>
+</main>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <span class="n mono" id="ln"></span>
+  <button class="x" id="lx" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 5l14 14M19 5 5 19"/></svg></button>
+  <button class="p" id="lp" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="q" id="lq" aria-label="Próxima"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div class="f"><img id="li" alt=""><div class="cp"><h3 id="lt"></h3><p class="mono" id="ls"></p></div></div>
+</div>
+<script>window.LB=[["img/gal/copo-stuppendo.webp", "Copo Stuppendo", "Gelato feito à mão"], ["img/gelato-damasco-copo.webp", "Gelato com damasco", "Ingredientes selecionados"], ["img/lojas/moema.jpg", "Loja de Moema", "Espaços acolhedores"], ["img/gal/figo-nozes.webp", "Figo com Nozes", "Gelato"], ["img/bolo-cafe.webp", "Café com bolo", "Cafés"], ["img/mundo/cannoli.webp", "Cannoli", "Doces"], ["img/mundo/bolo-fatia.webp", "Fatia de bolo da casa", "Bolos"], ["img/gal/amendoim.webp", "Amendoim", "Sabores da vitrine"], ["img/gal/castanha-caramelo.webp", "Castanha com Caramelo", "Sabores da vitrine"], ["img/gal/chocolate-castanhas.webp", "Chocolate com Castanhas", "Sabores da vitrine"], ["img/gal/churros.webp", "Churros", "Sabores da vitrine"], ["img/gal/creme-amora.webp", "Creme com Amora", "Sabores da vitrine"], ["img/gal/morango.webp", "Morango", "Sabores da vitrine"], ["img/gal/pistache-folhado.webp", "Pistache e Folhado", "Sabores da vitrine"]];</script>
+<script src="v3.js"></script>
+</body>
+</html>
